@@ -1,10 +1,11 @@
-import './App.css';
+import "./App.css";
+import TaskInput from "./Components/TaskInput/TaskInput";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <main>
+      <TaskInput />
+    </main>
   );
 }
 
