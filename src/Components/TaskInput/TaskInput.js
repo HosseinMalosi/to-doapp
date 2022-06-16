@@ -4,7 +4,7 @@ import Card from "../UI/Card";
 import classes from "./taskinput.module.css";
 
 const TaskInput = (props) => {
-  const [Task, setTask] = useState("");
+  const [Task, setTask] = useState([]);
   const TaskRef = useRef();
 
   const onSubmitHandler = (event) => {
