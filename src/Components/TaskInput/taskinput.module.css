@@ -3,17 +3,16 @@
 }
 
 .Box {
-  background: #789799;
-  width: 500px;
-  height: 140px;
+  width: inherit;
+  height: auto;
+  padding-bottom: 30px;
 }
 
 .Box form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  align-items: top;
   justify-content: center;
+  gap: 10px;
   height: 100%;
   width: calc(100% - 50px);
   margin: 0 auto;
@@ -21,12 +20,11 @@
 
 input,
 button {
-  border: 1px solid black;
+  border: none;
   outline: none;
 }
 
 .Box form input[type="text"] {
-  /* margin: 0 auto; */
   font-size: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
@@ -34,22 +32,41 @@ button {
   width: min(300px, 400px);
   height: 30px;
   padding-left: 5px;
+  background-color: azure;
+  -webkit-box-shadow: 5px 5px 13px -4px #000000;
+  box-shadow: 5px 5px 13px -4px #000000;
 }
 
-.BtnRow {
-  display: flex;
-  justify-content: left;
-  gap: 10px;
-  width: 300px;
-}
-
-.BtnRow button {
+.AddBtn {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
-  height: 25px;
-  width: auto;
-  font-size: 12px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  font-size: 20px;
   text-align: center;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 50%;
+  background-color: rgb(230, 243, 243);
+  -webkit-box-shadow: 5px 5px 13px -4px #000000;
+  box-shadow: 5px 5px 13px -4px #000000;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+}
+
+@keyframes bounce {
+  25% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

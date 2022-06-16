@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./App.css";
+import classes from "./App.module.css";
 import TaskInput from "./Components/TaskInput/TaskInput";
 import TaskList from "./Components/TaskList/TaskList";
+import Card from "./Components/UI/Card";
 
 function App() {
   const [Tasks, setTasks] = useState([]);
@@ -19,15 +20,12 @@ function App() {
     setTasks(Tasks.filter((item) => item.key !== key));
   };
 
-  
-
   return (
     <main>
+      <Card className={classes.Card}>
       <TaskInput onGiveTask={onGiveTaskHandler} />
-      <TaskList
-        items={Tasks}
-        onFilter={onFilterHandler}
-      />
+      <TaskList items={Tasks} onFilter={onFilterHandler} />
+      </Card>
     </main>
   );
 }

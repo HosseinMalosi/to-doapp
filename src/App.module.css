@@ -1,0 +1,24 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background: #159957;
+  background: -webkit-linear-gradient(to left, #159957, #155799);
+  background: linear-gradient(to left, #159957, #155799);
+  height: 100vh;
+}
+
+.Card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
